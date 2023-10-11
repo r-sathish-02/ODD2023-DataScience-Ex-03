@@ -39,22 +39,26 @@ df=pd.read_csv("iris.csv")
 
 df.nunique()
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/4108fa38-69b1-487f-a270-c8d066d8bff6)
+![ds-ex-3-img-1](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/68917b10-64b3-474a-a7ec-e9c7219a0e8c)
+
 
 ```
 df.head()
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/967ad792-c155-42a4-9569-37203c980c3a)
+![ds-ex-3-img-2](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/1daa7907-3ff2-4a9d-8417-32455660680a)
+
 
 ```
 df.tail()
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/30969eea-d208-484a-ac38-78f1ef25cba1)
+![ds-ex-3-img-3](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/f99141bc-633f-48c9-85cb-6ee973d08d3a)
+
 
 ```
 df.iloc[:,4].value_counts()
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/f78c1d28-1f00-41ec-a01c-b8398221904d)
+![ds-ex-3-img-4](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/1272799f-b200-41b8-8757-b86d83eb9698)
+
 
 ```
 for i in range(0,df.shape[1]):
@@ -62,14 +66,18 @@ for i in range(0,df.shape[1]):
   print(df.iloc[:,i].value_counts())
   print("---------------------------------------")
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/0f935ea1-b869-4002-bd24-a6c298d827d6)
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/46d8e700-2b17-4f57-9209-8c71920151e3)
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/c9dcd936-6bff-444d-9f0c-167df311d20e)
+![ds-ex-3-img-5](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/065efe99-089b-443c-97ba-8f4eab21c183)
+
+![ds-ex-3-img-6](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/12289dc3-1340-41de-8941-2987a33a823a)
+
+![ds-ex-3-img-7](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/ea000dfd-4345-437f-974a-2714a5720d7f)
+
 
 ```
 sns.countplot(x='species',data=df)
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/20b49382-01e2-4701-bba2-3f2e14c45f76)
+![ds-ex-3-img-8](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/ab48ad47-b205-40be-9359-5319d7e8a8fa)
+
 
 ```
 dfv=df.loc[df['species']=='virginica']
@@ -79,7 +87,7 @@ plt.xlabel('sepal length')
 plt.show()
 ##plt.plot(df_setosa['sepal_length'],np.zeros_like(df_setosa['sepal_length']),'o')
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/c2a09a66-3458-4835-b53a-19c088f96558)
+![ds-ex-3-img-9](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/73674fb4-01b9-4813-ac57-dad74d47e265)
 
 ```
 dfs=df.loc[df['species']=='setosa']
@@ -88,7 +96,8 @@ dfc=df.loc[df['species']=='versicolor']
 plt.plot(dfs['sepal_length'],np.zeros_like(dfs['sepal_length']),'*')
 plt.plot(dfc['sepal_length'],np.zeros_like(dfc['sepal_length']),'X')
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/d07d8028-de42-4666-a23e-9f86f445ba25)
+![ds-ex-3-img-10](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/5959f6ef-02ed-45a8-9c35-f41bdb046a06)
+
 
 ```
 plt.plot(dfv['sepal_length'],np.zeros_like(dfv['sepal_length']),'o')
@@ -97,7 +106,8 @@ plt.plot(dfc['sepal_length'],np.zeros_like(dfc['sepal_length']),'X')
 plt.xlabel('petal_length')
 plt.show()
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/b65cc1f3-a7ce-47ad-b85e-d2f3a6a80afe)
+![ds-ex-3-img-11](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/a9d47e11-694d-4453-b3a3-00d13d832e7a)
+
 
 ```
 plt.plot(dfv['sepal_length'],np.zeros_like(dfv['sepal_length']),'o')
@@ -106,7 +116,8 @@ plt.plot(dfc['sepal_length'],np.zeros_like(dfc['sepal_length']),'-')
 plt.xlabel('SEPALLENGTH')
 plt.show()
 ```
-![image](https://github.com/JoyceBeulah/Ex03-Univariate-Analysis/assets/118343698/41bf94e5-bdc0-46ff-918a-f1c8cf869dcc)
+![ds-ex-3-img-12](https://github.com/r-sathish-02/ODD2023-DataScience-Ex-03/assets/118787261/614f1209-ca4d-4a29-bf46-ed4b06db588b)
+
 
 ## RESULT:
 The given datasets are read and outliers are detected and are removed using IQR and z-score methods.
